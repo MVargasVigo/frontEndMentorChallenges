@@ -1,0 +1,117 @@
+html {
+  background-color: hsl(30, 54%, 90%);
+}
+
+#mainContainer {
+  background-color: hsl(0, 0%, 100%);
+  width: 50%;
+  margin: auto;
+  padding: 30px 40px;
+  border-radius: 20px;
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+}
+
+#mainContainer img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+h1 {
+  font-family: "Young Serif", serif;
+}
+
+h2 {
+  color: hsl(14, 45%, 36%);
+  font-size: 1.7rem;
+  font-family: "Young Serif", serif;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+ul {
+  padding: 0;
+  list-style-position: inside;
+}
+
+ol {
+  padding: 0;
+  list-style-position: inside;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+#preparation {
+  background-color: hsl(330, 100%, 98%);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#preparation #prep {
+  font-weight: bold;
+  color: hsl(332, 51%, 32%);
+  font-size: 1.2rem;
+}
+
+#preparation li {
+  margin-left: 4px;
+}
+
+#preparation li::marker {
+  color: hsl(332, 51%, 32%);
+}
+
+#ingredients {
+  border-bottom: hsl(30, 18%, 87%) 2px solid;
+  padding-bottom: 20px;
+}
+
+#ingredients li {
+  margin-left: 4px;
+}
+
+#ingredients li::marker {
+  color: hsl(14, 45%, 36%);
+}
+
+#instructions {
+  padding-bottom: 20px;
+  border-bottom: hsl(30, 18%, 87%) 2px solid;
+}
+
+#instructions li {
+  margin-left: 4px;
+}
+
+span {
+  margin-left: 10px;
+}
+
+#instructions li::marker {
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+}
+
+.row {
+  border-bottom: hsl(30, 18%, 87%) 1px solid;
+  display: flex;
+  text-align: left;
+}
+
+.tag {
+  margin-left: 20px;
+  width: 60%;
+}
+
+#lastRow {
+  border-bottom: none;
+}
+
+.value {
+  color: hsl(14, 45%, 36%);
+  font-weight: bold;
+}
