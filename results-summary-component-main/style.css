@@ -1,18 +1,4 @@
 /*
-colors
-primary
-- Light red: hsl(0, 100%, 67%)
-- Orangey yellow: hsl(39, 100%, 56%)
-- Green teal: hsl(166, 100%, 37%)
-- Cobalt blue: hsl(234, 85%, 45%)
-
-gradients
-- Light slate blue (background): hsl(252, 100%, 67%)
-- Light royal blue (background): hsl(241, 81%, 54%)
-
-- Violet blue (circle): hsla(256, 72%, 46%, 1)
-- Persian blue (circle): hsla(241, 72%, 46%, 0)
-
 - White: hsl(0, 0%, 100%)
 - Pale blue: hsl(221, 100%, 96%)
 - Light lavender: hsl(241, 100%, 89%)
@@ -31,7 +17,8 @@ body {
   display: flex;
   flex-direction: row;
   width: 60%;
-  max-width: 1200px;
+  height: 450px;
+  max-width: 700px;
   margin: auto;
   margin-bottom: 20px;
   box-shadow: rgba(0, 0, 0, 0.378) 0px 10px 20px;
@@ -52,7 +39,7 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   border-radius: 20px;
@@ -61,7 +48,8 @@ body {
 #result h1 {
   color: hsl(241, 100%, 89%);
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
@@ -73,8 +61,8 @@ body {
     hsla(241, 72%, 46%, 0)
   );
   text-align: center;
-  height: 150px;
-  width: 150px;
+  height: 180px;
+  width: 180px;
   color: hsl(241, 100%, 89%);
   font-size: 1rem;
   display: flex;
@@ -83,26 +71,116 @@ body {
 }
 
 #result #score #number {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
-  color: white;
+  color: hsl(221, 100%, 96%);
   margin-top: 0;
-  margin-bottom: 5px;
 }
 
 #result #score p {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 1.2rem;
 }
 
 #result #info {
   color: hsl(241, 100%, 89%);
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 #result #info h2 {
-  color: white;
+  color: hsl(221, 100%, 96%);
   font-weight: 700;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#result #info p {
+  margin-top: 0;
+}
+
+#summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#summary h3 {
+  color: hsl(224, 30%, 27%);
   font-size: 1.5rem;
-  margin-bottom: 5px;
+  font-weight: 800;
+  margin-top: 0;
+}
+
+.category {
+  background-color: hsla(0, 100%, 67%, 0.2);
+  height: 30px;
+  padding: 10px;
+  padding-bottom: 7px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.category #redName {
+  color: hsl(0, 100%, 67%);
+}
+
+.category .icon {
+  margin-right: 10px;
+}
+
+.category .catName {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#yellow {
+  background-color: hsla(39, 100%, 56%, 0.2);
+}
+
+.category #yellowName {
+  color: hsl(39, 100%, 56%);
+}
+
+#green {
+  background-color: hsl(166, 100%, 37%, 0.2);
+}
+
+.category #greenName {
+  color: hsl(166, 100%, 37%);
+}
+
+#blue {
+  background-color: hsl(234, 85%, 45%, 0.2);
+}
+
+.category #blueName {
+  color: hsl(234, 85%, 45%);
+}
+
+.category .catScore {
+  font-weight: 800;
+  color: hsl(224, 30%, 27%);
+}
+
+#btn {
+  height: auto;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(221, 100%, 96%);
+  font-weight: 700;
+  text-align: center;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.percent {
+  color: hsla(224, 30%, 27%, 0.5);
 }
