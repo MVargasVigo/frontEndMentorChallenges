@@ -1,0 +1,26 @@
+/*
+colors:
+
+primary:
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+neutral:
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+
+font weights
+montserrat: 500, 700
+fraunces 700
+
+*/
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+#price h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
