@@ -1,0 +1,114 @@
+/*
+colors
+primary
+- Orange: hsl(25, 97%, 53%)
+
+neutral
+- White: hsl(0, 0%, 100%)
+- Light Grey: hsl(217, 12%, 63%)
+- Medium Grey: hsl(216, 12%, 54%)
+- Dark Blue: hsl(213, 19%, 18%)
+- Very Dark Blue: hsl(216, 12%, 8%)
+
+font weights
+400,700
+
+*/
+
+#fir {
+  background-color: hsl(0, 0%, 100%);
+}
+
+#sec {
+  background-color: hsl(217, 12%, 63%);
+}
+
+#thi {
+  background-color: hsl(216, 12%, 54%);
+}
+
+#fou {
+  background-color: hsl(213, 19%, 18%);
+}
+
+#fif {
+  background-color: hsl(216, 12%, 8%);
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216, 12%, 8%);
+  color: white;
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainCard {
+  width: 40%;
+  background-color: hsl(213, 19%, 18%);
+  /* background: linear-gradient(to bottom) */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+
+#star {
+  background-color: hsl(216, 12%, 8%);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+#star svg {
+  padding: 10.5px 11.5px 6px 11.5px;
+  margin: auto;
+}
+
+.body {
+  margin-bottom: 20px;
+}
+
+.body p {
+  color: hsl(217, 12%, 63%);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+#options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#options span {
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#btn {
+  background-color: hsl(25, 97%, 53%);
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
