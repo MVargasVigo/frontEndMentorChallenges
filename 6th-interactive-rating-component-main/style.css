@@ -88,6 +88,7 @@ main {
 
 .option:hover {
   background-color: hsl(25, 97%, 53%);
+  cursor: default;
 }
 
 #btn {
@@ -104,6 +105,7 @@ main {
 #btn:hover {
   background-color: white;
   color: hsl(25, 97%, 53%);
+  cursor: default;
 }
 
 /*Thank you Card*/
