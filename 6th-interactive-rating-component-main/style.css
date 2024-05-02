@@ -15,26 +15,6 @@ font weights
 
 */
 
-#fir {
-  background-color: hsl(0, 0%, 100%);
-}
-
-#sec {
-  background-color: hsl(217, 12%, 63%);
-}
-
-#thi {
-  background-color: hsl(216, 12%, 54%);
-}
-
-#fou {
-  background-color: hsl(213, 19%, 18%);
-}
-
-#fif {
-  background-color: hsl(216, 12%, 8%);
-}
-
 body {
   font-family: "Overpass", sans-serif;
   background-color: hsl(216, 12%, 8%);
@@ -55,7 +35,8 @@ main {
 .mainCard {
   width: 40%;
   background-color: hsl(213, 19%, 18%);
-  /* background: linear-gradient(to bottom) */
+
+  /*   background: radial-gradient(hsl(216, 12%, 8%), hsl(213, 19%, 18%)); */
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -66,7 +47,7 @@ main {
 }
 
 #star {
-  background-color: hsl(216, 12%, 8%);
+  background-color: hsl(216, 12%, 54%);
   border-radius: 20px;
   margin-bottom: 20px;
 }
@@ -94,12 +75,12 @@ main {
 }
 
 #options span {
-  padding: 10px;
-  width: 30px;
-  height: 30px;
+  padding: 15px 20px;
+  height: auto;
   border-radius: 50%;
   text-align: center;
-  margin-bottom: 0;
+  background-color: hsl(216, 12%, 54%);
+  /* background: radial-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 54%)); */
 }
 
 #btn {
