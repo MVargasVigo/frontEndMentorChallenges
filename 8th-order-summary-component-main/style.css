@@ -22,9 +22,106 @@ body {
   background-image: url(./images/pattern-background-desktop.svg);
   background-repeat: no-repeat;
   color: hsl(223, 47%, 23%);
+  margin: 0;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  padding: 0;
+}
+
+#mainCard {
+  background-color: white;
+  border-radius: 20px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#hero {
+  margin: 0;
+}
+
+#hero img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 0;
+}
+
+#body {
+  padding: 10px 40px;
+  margin-bottom: 20px;
+}
+
+#summary {
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+#summary h1 {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+#plan {
+  background-color: hsl(225, 100%, 98%);
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#plan a {
+  color: hsl(245, 75%, 52%);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+#icon {
+  margin-right: 20px;
+}
+
+#planInfo {
+  margin-right: 120px;
+}
+
+#planInfo h2 {
+  font-size: 0.9rem;
+  font-weight: 900;
+  margin-bottom: 5px;
+  margin-top: 0;
+  text-align: start;
+}
+
+#planInfo p {
+  font-size: 1rem;
+  margin: 0;
+  text-align: start;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: hsl(224, 23%, 55%);
+}
+
+#payment {
+  background-color: hsl(245, 75%, 52%);
+  margin-bottom: 15px;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.267) 0 10px 20px;
 }
