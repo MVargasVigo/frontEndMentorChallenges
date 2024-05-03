@@ -1,0 +1,62 @@
+/*
+colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+Font weights
+300,400,600
+
+*/
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+#mainCard {
+  background-color: hsl(216, 50%, 16%);
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#image img {
+  width: 300px;
+}
+
+#details {
+  display: flex;
+  justify-content: space-between;
+}
+
+#author {
+  display: flex;
+  justify-content: space-between;
+}
+
+#author img {
+  width: 40px;
+  height: 40px;
+  border: 2px white solid;
+  border-radius: 50%;
+}
