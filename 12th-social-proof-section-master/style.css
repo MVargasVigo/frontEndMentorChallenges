@@ -19,3 +19,39 @@ Font - Weights: 400, 500, 700
 body {
   font-family: "League Spartan", sans-serif;
 }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 40px;
+}
+
+#header {
+  color: hsl(300, 43%, 22%);
+  grid-column: span 2;
+  margin-right: 80px;
+}
+
+#header h1 {
+  font-weight: 700;
+  font-size: 2.8rem;
+}
+
+#header p {
+  font-size: 1.2rem;
+}
+
+#ratings {
+  grid-column: span 2;
+}
+
+#ratings .rating {
+  padding: 10px;
+  background-color: hsl(300, 24%, 96%);
+  margin-bottom: 5px;
+}
+
+#reviews {
+  grid-column: span 4;
+}
