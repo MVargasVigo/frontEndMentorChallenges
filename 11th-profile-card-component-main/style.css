@@ -33,7 +33,7 @@ main {
   display: flex;
   flex-direction: column;
   width: 500px;
-  height: 600px;
+  height: 550px;
   border-radius: 20px;
   background-color: white;
 }
@@ -44,7 +44,7 @@ main {
 
 #pattern #blue {
   width: 100%;
-  height: 50%;
+  height: 45%;
 }
 
 #blue img {
@@ -56,7 +56,7 @@ main {
 #pattern #white {
   background-color: white;
   width: 100%;
-  height: 50%;
+  height: 55%;
 }
 
 #stats {
@@ -84,7 +84,7 @@ main {
 #profile {
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
