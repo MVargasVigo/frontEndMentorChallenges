@@ -25,6 +25,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   padding: 40px;
+  gap: 30px;
 }
 
 #header {
@@ -35,23 +36,112 @@ main {
 
 #header h1 {
   font-weight: 700;
-  font-size: 2.8rem;
+  font-size: 3rem;
+  width: 80%;
 }
 
 #header p {
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 #ratings {
   grid-column: span 2;
+  display: grid;
+  align-items: center;
+  height: 250px;
 }
 
 #ratings .rating {
-  padding: 10px;
+  padding: 5px;
   background-color: hsl(300, 24%, 96%);
   margin-bottom: 5px;
+  width: 375px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+
+.stars {
+  margin: 0 25px;
+}
+
+#top {
+  justify-self: start;
+  align-self: flex-end;
+}
+
+#mid {
+  justify-self: center;
+  align-self: center;
+}
+
+#bot {
+  justify-self: end;
+  align-self: flex-start;
 }
 
 #reviews {
   grid-column: span 4;
+  display: grid;
+  width: 100%;
+  grid-template-rows: 1;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 250px;
+}
+
+.review {
+  background-color: hsl(300, 43%, 22%);
+  color: white;
+  padding: 20px;
+  width: 300px;
+  height: 175px;
+  border-radius: 5px;
+}
+
+.review p {
+  margin-top: 20px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.reviewer {
+  display: flex;
+  flex-direction: row;
+}
+
+.reviewer span {
+  margin-right: 20px;
+}
+
+.reviewer span img {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.reviewer h2 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.reviewer p {
+  font-size: 1rem;
+  margin-top: 0;
+  color: hsl(333, 80%, 67%);
+}
+
+#colton {
+  align-self: start;
+}
+
+#irene {
+  align-self: center;
+}
+
+#anne {
+  align-self: end;
 }
