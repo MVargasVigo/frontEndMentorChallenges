@@ -1,0 +1,44 @@
+/*
+## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+Font weights: Weights: 500, 700
+
+*/
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#mainCard {
+  display: flex;
+  width: 80%;
+}
+
+#image {
+  width: 40%;
+}
+
+#image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#text {
+  width: 60%;
+  background-color: white;
+}
