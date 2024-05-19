@@ -28,6 +28,7 @@ main {
 #mainCard {
   display: flex;
   width: 80%;
+  height: 280px;
   color: hsl(217, 19%, 35%);
   margin-bottom: 20px;
 }
@@ -45,19 +46,24 @@ main {
 #text {
   width: 60%;
   background-color: white;
-  padding: 20px 30px;
+  padding: 20px 40px 20px 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 #heading h1 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
 #body p {
   font-size: 1rem;
   color: hsl(214, 17%, 51%);
+  font-weight: 500;
+  padding-right: 15px;
+  line-height: 1.4;
 }
 
 #author {
@@ -104,4 +110,38 @@ main {
   justify-content: center;
   align-items: center;
   margin: 0;
+}
+
+#shareOptions {
+  background-color: hsl(217, 19%, 35%);
+  width: 200px;
+  height: 20px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 47%;
+  left: 73%;
+}
+
+#shareOptions p {
+  color: hsl(212, 23%, 69%);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 0;
+  margin-right: 15px;
+}
+
+#logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 45%;
+}
+
+#shareOptions.hidden {
+  display: none;
 }
