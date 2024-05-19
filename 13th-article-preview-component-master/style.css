@@ -13,6 +13,7 @@ Font weights: Weights: 500, 700
 body {
   background-color: hsl(210, 46%, 95%);
   margin: 0;
+  font-family: "Manrope", sans-serif;
 }
 
 main {
@@ -27,18 +28,80 @@ main {
 #mainCard {
   display: flex;
   width: 80%;
+  color: hsl(217, 19%, 35%);
+  margin-bottom: 20px;
 }
 
 #image {
   width: 40%;
+  height: 100%;
 }
 
 #image img {
   width: 100%;
-  object-fit: cover;
+  height: 100%;
 }
 
 #text {
   width: 60%;
   background-color: white;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#heading h1 {
+  font-size: 1.2rem;
+}
+
+#body p {
+  font-size: 1rem;
+  color: hsl(214, 17%, 51%);
+}
+
+#author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+#avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#authorName h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+#authorName p {
+  margin-top: 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: hsl(212, 23%, 69%);
+}
+
+#btn {
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
