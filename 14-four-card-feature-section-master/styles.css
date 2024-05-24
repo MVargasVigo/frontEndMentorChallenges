@@ -23,4 +23,103 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  background-color: hsl(0, 0%, 98%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+#header {
+  width: 50%;
+  max-width: 750px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#header h1 {
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
+}
+
+#header h1 span {
+  font-weight: 600;
+}
+
+#header p {
+  color: hsl(229, 6%, 66%);
+}
+
+#cardContainer {
+  width: 80%;
+  max-width: 1200px;
+  color: hsl(229, 6%, 66%);
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+  border-top: 5px solid black;
+  box-shadow: rgba(0, 0, 0, 0.118) 0px 10px 10px;
+}
+
+.card h2 {
+  color: hsl(234, 12%, 34%);
+}
+
+.cardImg {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#supervisor {
+  border-top-color: hsl(180, 62%, 55%);
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+#teamBuilder {
+  border-top-color: hsl(0, 78%, 62%);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#karma {
+  border-top-color: hsl(34, 97%, 64%);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+#calculator {
+  border-top-color: hsl(212, 86%, 64%);
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
