@@ -84,6 +84,10 @@ main {
   line-height: 1.5;
 }
 
+#copy {
+  margin-bottom: 20px;
+}
+
 #email {
   display: flex;
   align-items: center;
@@ -100,9 +104,8 @@ main {
 ::placeholder {
   color: hsla(0, 6%, 24%, 0.537);
 }
-
 #email img {
-  background-color: hsl(0, 74%, 74%);
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   border-radius: 20px;
   padding: 12px 40px;
   position: absolute;
