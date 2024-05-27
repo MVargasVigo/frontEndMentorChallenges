@@ -34,6 +34,7 @@ body {
 main {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #mainCard {
@@ -110,11 +111,32 @@ input:focus {
 ::placeholder {
   color: hsla(0, 6%, 24%, 0.537);
 }
-#email img {
+
+#email #error {
+  position: absolute;
+  left: 25%;
+}
+
+#email #btn {
   background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
   border-radius: 20px;
   padding: 12px 40px;
   position: absolute;
-  left: 25%;
+  left: 28%;
   box-shadow: rgba(0, 0, 0, 0.275) 5px 5px 20px;
+}
+
+#email #btn:hover {
+  background: linear-gradient(135deg, hsl(0, 78%, 86%), hsl(0, 70%, 64%));
+}
+
+#message {
+  margin-left: 15px;
+  font-size: 0.9rem;
+  color: hsl(0, 93%, 68%);
+  font-weight: 400;
+}
+
+.hidden {
+  display: none;
 }
