@@ -44,10 +44,50 @@
           Try it free 7 days <span>then $20/mo. thereafter</span>
         </div>
         <div id="form">
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
-          <input type="text" placeholder="Email Address" />
-          <input type="text" placeholder="Password" />
+          <div class="field">
+            <div class="input">
+              <input type="text" placeholder="First Name" />
+              <img
+                src="./images/icon-error.svg"
+                alt=""
+                class="errorIcon hidden"
+              />
+            </div>
+            <p class="errorMessage hidden">First Name cannot be empty</p>
+          </div>
+          <div class="field">
+            <div class="input">
+              <input type="text" placeholder="Last Name" />
+              <img
+                src="./images/icon-error.svg"
+                alt=""
+                class="errorIcon hidden"
+              />
+            </div>
+            <p class="errorMessage hidden">Last Name cannot be empty</p>
+          </div>
+          <div class="field">
+            <div class="input">
+              <input type="text" placeholder="Email Address" />
+              <img
+                src="./images/icon-error.svg"
+                alt=""
+                class="errorIcon hidden"
+              />
+            </div>
+            <p class="errorMessage hidden">Looks like this is not an email</p>
+          </div>
+          <div class="field">
+            <div class="input">
+              <input type="text" placeholder="Password" />
+              <img
+                src="./images/icon-error.svg"
+                alt=""
+                class="errorIcon hidden"
+              />
+            </div>
+            <p class="errorMessage hidden">Password cannot be empty</p>
+          </div>
           <button>Claim your free trial</button>
           <p>
             By clicking the button, you are agreeing to our
