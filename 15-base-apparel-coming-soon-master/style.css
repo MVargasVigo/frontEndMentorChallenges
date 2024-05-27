@@ -91,6 +91,7 @@ main {
 #email {
   display: flex;
   align-items: center;
+  width: 500px;
 }
 
 #email #input {
@@ -98,7 +99,12 @@ main {
   padding: 15px 20px;
   width: 60%;
   border-radius: 20px;
-  border: 1px solid hsla(0, 6%, 24%, 0.296);
+  border: 1px solid black;
+  border-color: hsla(0, 6%, 24%, 0.296);
+}
+
+input:focus {
+  border-color: hsl(0, 36%, 70%);
 }
 
 ::placeholder {
@@ -110,4 +116,5 @@ main {
   padding: 12px 40px;
   position: absolute;
   left: 25%;
+  box-shadow: rgba(0, 0, 0, 0.275) 5px 5px 20px;
 }
