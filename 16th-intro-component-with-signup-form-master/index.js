@@ -8,19 +8,16 @@ const thirdInput = document.getElementById("inputThird");
 const fourthInput = document.getElementById("inputFourth");
 const inputArray = document.querySelectorAll("input");
 
-//Error Icon Selectors
-const firstIcon = document.getElementById("iconFirst");
-const secondIcon = document.getElementById("iconSecond");
-const thirdIcon = document.getElementById("iconThird");
-const fourthIcon = document.getElementById("iconFourth");
-const iconArray = document.querySelectorAll(".errorIcon");
-
 //Error Message Selectors
 const firstMessage = document.getElementById("messageFirst");
 const secondMessage = document.getElementById("messageSecond");
 const thirdMessage = document.getElementById("messageThird");
 const fourthMessage = document.getElementById("messageFourth");
 const messageArray = document.querySelectorAll(".errorMessage");
+
+//Icon Array
+
+const iconArray = document.querySelectorAll(".errorIcon");
 
 //Show Functions
 const show = function (field) {
@@ -37,55 +34,40 @@ const hide = function (field) {
   field.classList.add("hidden");
 };
 
+const hideAll = function () {
+  iconArray.forEach((icon) => icon.classList.add("hidden"));
+  messageArray.forEach((message) => message.classList.add("hidden"));
+};
+
 const clearInput = function () {
   inputArray.forEach((input) => (input.value = ""));
 };
 
-const complete = function () {
-  iconArray.forEach((icon) => icon.classList.add("hidden"));
-  messageArray.forEach((message) => message.classList.add("hidden"));
-  button.textContent = "Thank you!";
+const normalColor = function () {
+  inputArray.forEach((input) => (input.style.color = "black"));
 };
 
 button.addEventListener("click", function () {
-  if (
-    !firstInput.value &&
-    !secondInput.value &&
-    !thirdInput.value &&
-    !fourthInput.value
-  ) {
-    showAll();
-  } else {
-    clearInput();
-    complete();
-  }
-  /* if (
-    firstInput.value &&
-    secondInput.value &&
-    thirdInput.value &&
-    fourthInput.value
-  ) {
-    console.log(
-      firstInput.value,
-      secondInput.value,
-      thirdInput.value,
-      fourthInput.value
-    );
-    showAll();
-  } else {
-    console.log(
-      firstInput.value,
-      secondInput.value,
-      thirdInput.value,
-      fourthInput.value
-    );
-    if (
-      firstInput.value &&
-      secondInput.value &&
-      thirdInput.value &&
-      fourthInput.value
-    ) {
+  for (const input of inputArray) {
+    const parentDiv = input.closest(".input");
+    const errIcon = document.createElement("img");
+    errIcon.src = "./images/icon-error.svg";
+    errIcon.classList.add("errorIcon");
+    const parentField = input.closest(".field");
+    const errMess = document.createElement("p");
+    errMess.textContent = "This field cannot be empty";
+    errMess.classList.add("errorMessage");
+    parentDiv.appendChild(errIcon);
+    parentField.appendChild(errMess);
+    if (!input.value) {
+      if (errIcon.classList.contains("hidden")) {
+        console.log(true);
+      }
+    } else {
+      input.style.color = "hsl(154, 59%, 51%)";
+      errIcon.classList.add("hidden");
+      errMess.classList.add("hidden");
       button.textContent = "Thank you!";
     }
-  } */
+  }
 });
