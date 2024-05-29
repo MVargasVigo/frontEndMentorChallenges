@@ -16,39 +16,13 @@ const fourthMessage = document.getElementById("messageFourth");
 const messageArray = document.querySelectorAll(".errorMessage");
 
 //Icon Array
-
 const iconArray = document.querySelectorAll(".errorIcon");
 
-//Show Functions
-const show = function (field) {
-  field.classList.remove("hidden");
-};
-
-const showAll = function () {
-  iconArray.forEach((icon) => icon.classList.remove("hidden"));
-  messageArray.forEach((message) => message.classList.remove("hidden"));
-};
-
-//Hide Functions
-const hide = function (field) {
-  field.classList.add("hidden");
-};
-
-const hideAll = function () {
-  iconArray.forEach((icon) => icon.classList.add("hidden"));
-  messageArray.forEach((message) => message.classList.add("hidden"));
-};
-
-const clearInput = function () {
-  inputArray.forEach((input) => (input.value = ""));
-};
-
-const normalColor = function () {
-  inputArray.forEach((input) => (input.style.color = "black"));
-};
+//Functions
 
 button.addEventListener("click", function () {
   for (const input of inputArray) {
+    elementCreator(input);
     const parentDiv = input.closest(".input");
     const errIcon = document.createElement("img");
     errIcon.src = "./images/icon-error.svg";
