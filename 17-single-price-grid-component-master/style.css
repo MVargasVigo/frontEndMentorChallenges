@@ -22,4 +22,92 @@
 
 body {
   font-family: "Karla", sans-serif;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+  color: hsl(218, 22%, 67%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  max-width: 670px;
+  height: 50%;
+}
+
+#join {
+  width: 100%;
+  height: 40%;
+  background-color: white;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#join > * {
+  width: 90%;
+}
+
+h1 {
+  color: hsl(179, 62%, 43%);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+#join #greenP {
+  color: hsl(71, 73%, 54%);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+#join p {
+  margin-top: 0;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+#row {
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+
+h2 {
+  color: white;
+}
+
+#subs {
+  width: 50%;
+  height: 100%;
+  background-color: hsl(179, 62%, 43%);
+  color: hsl(204, 43%, 93%);
+}
+
+#questions {
+  width: 50%;
+  height: 100%;
+  background-color: hsla(179, 62%, 43%, 0.745);
+  color: hsl(204, 43%, 93%);
+}
+
+button {
+  background-color: hsl(71, 73%, 54%);
+  border: none;
 }
