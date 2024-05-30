@@ -23,4 +23,93 @@
 
 body {
   font-family: "Libre Franklin", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100vh;
+}
+
+main > * {
+  width: 100%;
+  display: flex;
+}
+
+#logo {
+  justify-content: center;
+  align-items: center;
+}
+
+#heading {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#heading h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+#heading span {
+  font-weight: 700;
+}
+
+#heading p {
+  font-weight: 600;
+}
+
+#submit {
+  justify-content: center;
+}
+
+#submit input {
+  border-radius: 10px;
+  outline: none;
+  padding: 10px;
+  width: 70%;
+}
+
+#submit button {
+  width: 30%;
+  border-radius: 20px;
+  border-width: 0;
+  background-color: hsl(223, 87%, 63%);
+  color: white;
+}
+
+#img {
+  justify-content: center;
+  align-items: center;
+}
+
+#img img {
+  width: 100%;
+  object-fit: contain;
+}
+
+#footing {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#social {
+  display: flex;
+  width: 10%;
+}
+
+#social img {
+  width: 30%;
+  object-fit: contain;
+  margin-right: 15px;
 }
