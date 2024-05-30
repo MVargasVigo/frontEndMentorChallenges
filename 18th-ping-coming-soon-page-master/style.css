@@ -34,7 +34,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 60%;
   height: 100vh;
 }
 
@@ -46,17 +46,19 @@ main > * {
 #logo {
   justify-content: center;
   align-items: center;
+  margin-bottom: 2.5%;
 }
 
 #heading {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2.5%;
 }
 
 #heading h1 {
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 100;
   margin-bottom: 0;
 }
 
@@ -73,10 +75,16 @@ main > * {
 }
 
 #submit input {
-  border-radius: 10px;
+  border-radius: 20px;
+  border: 1px hsl(0, 0%, 59%) solid;
   outline: none;
-  padding: 10px;
-  width: 70%;
+  padding: 10px 20px;
+  width: 68%;
+  margin-right: 2%;
+}
+
+::placeholder {
+  color: hsl(0, 0%, 59%);
 }
 
 #submit button {
@@ -85,11 +93,14 @@ main > * {
   border-width: 0;
   background-color: hsl(223, 87%, 63%);
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 3px 10px;
 }
 
 #img {
   justify-content: center;
   align-items: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 #img img {
@@ -101,15 +112,24 @@ main > * {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: hsl(0, 0%, 59%);
+  margin: 0;
 }
 
 #social {
   display: flex;
+  justify-content: center;
   width: 10%;
+  color: #4f7df3;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 #social img {
   width: 30%;
+  border: hsl(223, 100%, 88%) 1px solid;
+  padding: 5px;
+  border-radius: 50%;
   object-fit: contain;
   margin-right: 15px;
 }
