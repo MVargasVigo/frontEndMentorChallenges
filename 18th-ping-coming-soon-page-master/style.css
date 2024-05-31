@@ -73,12 +73,14 @@ main > * {
 #submit {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /*   align-items: center;
+ */
   width: 100%;
 }
 
 #submit #inputBox {
   width: 68%;
+  margin-right: 2%;
 }
 
 #inputBox p {
@@ -90,8 +92,7 @@ main > * {
   border: 1px hsl(0, 0%, 59%) solid;
   outline: none;
   padding: 10px 20px;
-  margin-right: 2%;
-  width: 100%;
+  width: 90%;
 }
 
 ::placeholder {
@@ -99,7 +100,9 @@ main > * {
 }
 
 #submit button {
+  font-weight: 700;
   width: 30%;
+  height: 100%;
   border-radius: 20px;
   border-width: 0;
   background-color: hsl(223, 87%, 63%);

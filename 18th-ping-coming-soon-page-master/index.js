@@ -12,14 +12,17 @@ const printError = function (message) {
   errorMsg.style.marginTop = "10px";
   errorMsg.style.marginLeft = "10px";
   errorMsg.style.color = "red";
+  button.style.height = "60%";
 };
 
 button.addEventListener("click", function () {
-  console.log(input.value);
   if (input.value.includes("@") && input.value.includes(".com")) {
     input.style.color = "#4f7df3";
     input.style.fontWeight = "700";
-    console.log("Success!");
+    errorMsg.textContent = "";
+    errorMsg.style.margin = "0";
+    button.style.height = "100%";
+    input.style.borderColor = "#4f7df3";
   } else {
     input.style.borderColor = "red";
     input.style.borderWidth = "2px";
