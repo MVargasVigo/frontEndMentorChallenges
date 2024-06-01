@@ -1,0 +1,20 @@
+/* ## Colors
+- Violet:  #674baf
+-Soft Magenta: #e882e8
+## Heading
+- Weights: 400, 600
+### Body
+- Weights: 400
+*/
+body {
+  background-image: url(./images/bg-desktop.svg);
+  background-color: #674baf;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
