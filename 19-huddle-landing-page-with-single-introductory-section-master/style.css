@@ -11,10 +11,58 @@ body {
   background-color: #674baf;
   background-repeat: no-repeat;
   height: 100vh;
+  width: 100%;
   color: white;
   font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#mainCard {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+}
+
+#image {
+  width: 58%;
+  margin-right: 2%;
+}
+
+#image img {
+  width: 100%;
+}
+
+#text {
+  width: 40%;
 }
 
 h1 {
   font-family: "Poppins", sans-serif;
+}
+
+#socialContainer {
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#socials {
+  width: 10%;
+}
+
+#socials > * {
+  width: 30%;
+}
+
+#btn {
+  background-color: white;
+  color: #674baf;
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 12px;
+  border-radius: 20px;
+  border-width: 0;
+  width: 40%;
 }
