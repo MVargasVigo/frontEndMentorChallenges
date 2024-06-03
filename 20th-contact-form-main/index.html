@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="success">
+      <p>
+        <span><img src="./assets/images/icon-success-check.svg" alt="" /></span>
+        Message Sent!
+      </p>
+      <p id="sucMes">Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <main>
+      <div id="mainCard">
+        <h1>Contact Us</h1>
+        <form action="">
+          <label for="firstName">First Name</label>
+          <input type="text" name="firstName" id="firstName" />
+          <p id="firstNameErr" class="error">This field is required</p>
+          <label for="lastName">Last Name</label>
+          <input type="text" name="lastName" id="lastName" />
+          <p id="lastNameErr" class="error">This field is required</p>
+          <label for="email">Email Adress</label>
+          <input type="email" id="email" />
+          <p id="emailErr" class="error">Please enter a valid email address</p>
+          <label for="type">Query Type</label>
+          <label for="general">General Enquiry</label>
+          <input type="checkbox" name="general type" id="generalQ" />
+          <label for="support">Support Request</label>
+          <input type="checkbox" name="support type" id="supportQ" />
+          <p id="queryErr" class="error">Please select a query type</p>
+          <label for="message">Message</label>
+          <input type="text" name="message" id="message" />
+          <p id="messErr" class="error">This field is required</p>
+          <input type="checkbox" name="consent" id="consent" />
+          <label for="consent">I consent to being contacted by the team</label>
+          <p id="consentErr" class="error">
+            To submit this form, please consent to being contacted
+          </p>
+          <button>Submit</button>
+        </form>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
