@@ -45,6 +45,59 @@ body {
   font-size: 0.8rem;
 }
 
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 #mainCard {
   background-color: white;
+  width: 60%;
+  padding: 20px;
+}
+
+.split {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.half {
+  width: 50%;
+}
+
+.half > * {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  color: #d73c3c;
+}
+
+.hidden {
+  /*  display: none  ;*/
+}
+
+#submit {
+  background-color: #0c7d69;
+  color: white;
+  border: none;
+  font-family: "Karla", sans-serif;
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 1rem;
 }

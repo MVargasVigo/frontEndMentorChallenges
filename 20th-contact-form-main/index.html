@@ -32,7 +32,7 @@
     </style>
   </head>
   <body>
-    <div id="success">
+    <div id="success" class="hidden">
       <p>
         <span><img src="./assets/images/icon-success-check.svg" alt="" /></span>
         Message Sent!
@@ -43,30 +43,61 @@
       <div id="mainCard">
         <h1>Contact Us</h1>
         <form action="">
-          <label for="firstName">First Name</label>
-          <input type="text" name="firstName" id="firstName" />
-          <p id="firstNameErr" class="error">This field is required</p>
-          <label for="lastName">Last Name</label>
-          <input type="text" name="lastName" id="lastName" />
-          <p id="lastNameErr" class="error">This field is required</p>
-          <label for="email">Email Adress</label>
-          <input type="email" id="email" />
-          <p id="emailErr" class="error">Please enter a valid email address</p>
-          <label for="type">Query Type</label>
-          <label for="general">General Enquiry</label>
-          <input type="checkbox" name="general type" id="generalQ" />
-          <label for="support">Support Request</label>
-          <input type="checkbox" name="support type" id="supportQ" />
-          <p id="queryErr" class="error">Please select a query type</p>
-          <label for="message">Message</label>
-          <input type="text" name="message" id="message" />
-          <p id="messErr" class="error">This field is required</p>
-          <input type="checkbox" name="consent" id="consent" />
-          <label for="consent">I consent to being contacted by the team</label>
-          <p id="consentErr" class="error">
-            To submit this form, please consent to being contacted
-          </p>
-          <button>Submit</button>
+          <div class="split" id="nameDiv">
+            <div class="half column">
+              <label for="firstName">First Name</label>
+              <input type="text" name="firstName" id="firstName" />
+              <p id="firstNameErr" class="error hidden">
+                This field is required
+              </p>
+            </div>
+            <div class="half column">
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" id="lastName" class="half" />
+              <p id="lastNameErr" class="error hidden">
+                This field is required
+              </p>
+            </div>
+          </div>
+          <div class="full column" id="emailDiv">
+            <label for="email">Email Adress</label>
+            <input type="email" id="email" />
+            <p id="emailErr" class="error hidden">
+              Please enter a valid email address
+            </p>
+          </div>
+          <div class="column" id="queryDiv">
+            <p>Query Type</p>
+            <div class="split">
+              <div class="half row">
+                <input type="checkbox" name="general" id="generalQ" />
+                <label for="general">General Enquiry</label>
+              </div>
+              <div class="half row">
+                <input type="checkbox" name="support" id="supportQ" class= />
+                <label for="support">Support Request</label>
+              </div>
+            </div>
+            <p id="queryErr" class="error hidden">Please select a query type</p>
+          </div>
+          <div class="full column" id="messageDiv">
+            <label for="message">Message</label>
+            <input type="text" name="message" id="message" />
+            <p id="messErr" class="error hidden">This field is required</p>
+          </div>
+          <div class="full column" id="consentDiv">
+            <div class="row">
+              <input type="checkbox" name="consent" id="consent" />
+              <label for="consent"
+                >I consent to being contacted by the team</label
+              >
+            </div>
+            <p id="consentErr" class="error hidden">
+              To submit this form, please consent to being contacted
+            </p>
+          </div>
+
+          <button id="submit">Submit</button>
         </form>
       </div>
     </main>
