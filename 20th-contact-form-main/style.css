@@ -65,14 +65,25 @@ main {
 
 h1 {
   margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 input {
-  padding: 10px 0;
+  padding: 10px 20px;
   border-radius: 10px;
   border-width: 1px;
   border-style: solid;
   border-color: #87a3a6;
+}
+
+input:focus {
+  border-color: #0c7d69;
+  border-width: 2px;
+  outline: none;
+}
+
+input:hover {
+  cursor: pointer;
 }
 
 .border {
@@ -108,6 +119,14 @@ input {
   display: flex;
 }
 
+.nameBorder {
+  width: 100%;
+}
+
+.nameBorder > * {
+  width: 86%;
+}
+
 .column {
   display: flex;
   flex-direction: column;
@@ -123,6 +142,10 @@ label {
   margin-bottom: 10px;
 }
 
+#message {
+  height: 80px;
+}
+
 .error {
   color: #d73c3c;
   margin-top: 10px;
@@ -131,7 +154,7 @@ label {
 }
 
 .redBorder {
-  border-color: #d73c3c;
+  /* border-color: #d73c3c; */
 }
 
 #consentDiv {
