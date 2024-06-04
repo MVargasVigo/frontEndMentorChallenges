@@ -27,8 +27,9 @@ body {
   color: #2b4246;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  height: 100vh;
 }
 
 #success {
@@ -51,14 +52,19 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /*   height: 100vh;
+ */
 }
 
 #mainCard {
   background-color: white;
   width: 60%;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
+}
+
+h1 {
+  margin-top: 5px;
 }
 
 input {
@@ -85,11 +91,13 @@ input {
   display: flex;
   flex-direction: row;
   width: 100%;
+  justify-content: space-between;
 }
 
 .half {
-  width: 47%;
-  margin-right: 3%;
+  width: 49%;
+  /*   margin-right: 3%;
+ */
 }
 
 .half > * {
@@ -105,12 +113,37 @@ input {
   flex-direction: column;
 }
 
+.asterisk {
+  color: #0c7d69;
+  font-weight: 700;
+}
+
 label {
+  margin-top: 15px;
   margin-bottom: 10px;
 }
 
 .error {
   color: #d73c3c;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+
+.redBorder {
+  border-color: #d73c3c;
+}
+
+#consentDiv {
+  margin-top: 20px;
+}
+
+#consentDiv label {
+  margin: 5px;
+}
+
+#consentErr {
+  margin-top: 5px;
 }
 
 .hidden {

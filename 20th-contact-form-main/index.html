@@ -45,29 +45,45 @@
         <form action="">
           <div class="split" id="nameDiv">
             <div class="half column">
-              <label for="firstName">First Name</label>
-              <input type="text" name="firstName" id="firstName" />
+              <label for="firstName"
+                >First Name <span class="asterisk">*</span></label
+              >
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                class="redBorder"
+              />
               <p id="firstNameErr" class="error hidden">
                 This field is required
               </p>
             </div>
             <div class="half column">
-              <label for="lastName">Last Name</label>
-              <input type="text" name="lastName" id="lastName" class="half" />
+              <label for="lastName"
+                >Last Name <span class="asterisk">*</span></label
+              >
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                class="redBorder"
+              />
               <p id="lastNameErr" class="error hidden">
                 This field is required
               </p>
             </div>
           </div>
           <div class="full column" id="emailDiv">
-            <label for="email">Email Adress</label>
-            <input type="email" id="email" />
+            <label for="email"
+              >Email Adress <span class="asterisk">*</span></label
+            >
+            <input type="email" id="email" class="redBorder" />
             <p id="emailErr" class="error hidden">
               Please enter a valid email address
             </p>
           </div>
           <div class="column" id="queryDiv">
-            <p>Query Type</p>
+            <p>Query Type <span class="asterisk">*</span></p>
             <div class="split">
               <div class="half row border">
                 <input type="checkbox" name="general" id="generalQ" />
@@ -81,8 +97,8 @@
             <p id="queryErr" class="error hidden">Please select a query type</p>
           </div>
           <div class="full column" id="messageDiv">
-            <label for="message">Message</label>
-            <input type="text" name="message" id="message" />
+            <label for="message">Message <span class="asterisk">*</span></label>
+            <input type="text" name="message" id="message" class="redBorder" />
             <p id="messErr" class="error hidden">This field is required</p>
           </div>
           <div class="full column" id="consentDiv">
