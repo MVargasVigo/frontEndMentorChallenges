@@ -44,40 +44,36 @@
         <h1>Contact Us</h1>
         <form action="">
           <div class="split" id="nameDiv">
-            <div class="half column">
+            <div class="column">
               <label for="firstName"
                 >First Name <span class="asterisk">*</span></label
               >
-              <div class="redBorder nameBorder">
-                <input
-                  type="text"
-                  name="firstName"
-                  id="firstName"
-                  class="redBorder"
-                />
-              </div>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                class="redBorder"
+              />
               <p id="firstNameErr" class="error hidden">
                 This field is required
               </p>
             </div>
-            <div class="half column">
+            <div class="column">
               <label for="lastName"
                 >Last Name <span class="asterisk">*</span></label
               >
-              <div class="redBorder nameBorder">
-                <input
-                  type="text"
-                  name="lastName"
-                  id="lastName"
-                  class="redBorder"
-                />
-              </div>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                class="redBorder"
+              />
               <p id="lastNameErr" class="error hidden">
                 This field is required
               </p>
             </div>
           </div>
-          <div class="full column" id="emailDiv">
+          <div class="column" id="emailDiv">
             <label for="email"
               >Email Adress <span class="asterisk">*</span></label
             >
@@ -89,20 +85,25 @@
           <div class="column" id="queryDiv">
             <p>Query Type <span class="asterisk">*</span></p>
             <div class="split">
-              <div class="half row border checkHalf">
-                <input type="radio" name="query" id="general" />
-                <label for="general">General Enquiry</label>
+              <div class="row border checkHalf">
+                <input type="radio" name="query" id="generalQ" />
+                <label for="generalQ">General Enquiry</label>
               </div>
-              <div class="half row border checkHalf">
-                <input type="radio" name="query" id="support" />
-                <label for="support">Support Request</label>
+              <div class="row border checkHalf">
+                <input type="radio" name="query" id="supportQ" />
+                <label for="supportQ">Support Request</label>
               </div>
             </div>
             <p id="queryErr" class="error hidden">Please select a query type</p>
           </div>
           <div class="full column" id="messageDiv">
             <label for="message">Message <span class="asterisk">*</span></label>
-            <input type="text" name="message" id="message" class="redBorder" />
+            <textarea
+              name="message"
+              id="message"
+              class="redBorder"
+              rows="4"
+            ></textarea>
             <p id="messErr" class="error hidden">This field is required</p>
           </div>
           <div class="full column" id="consentDiv">
