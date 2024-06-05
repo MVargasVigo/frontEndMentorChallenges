@@ -37,11 +37,16 @@ body {
   color: white;
   background-color: #2b4246;
   border-radius: 10px;
-  width: 35%;
+  width: 40%;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 #success p {
   margin: 15px;
+}
+
+#success span {
+  margin-right: 10px;
 }
 
 #sucMes {
@@ -206,7 +211,7 @@ textarea:focus {
   display: none;
 }
 
-#submit {
+#btn {
   background-color: #0c7d69;
   color: white;
   border: none;
@@ -219,7 +224,11 @@ textarea:focus {
   margin-top: 30px;
 }
 
-#submit:hover {
+#btn:hover {
   background-color: #06483c;
   cursor: pointer;
+}
+
+.attribution {
+  margin-bottom: 20px;
 }
