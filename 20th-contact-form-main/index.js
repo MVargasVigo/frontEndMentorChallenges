@@ -1,11 +1,13 @@
 //Elements
 const button = document.getElementById("btn");
+const redBorders = document.querySelectorAll(".redBorder");
+
+//Inputs
 const allInputs = document.querySelectorAll("input");
 const firstNameInput = document.getElementById("firstName");
 const lastNameInput = document.getElementById("lastName");
 const emailInput = document.getElementById("email");
-const textArea = document.querySelector("textArea");
-const redBorders = document.querySelectorAll(".redBorder");
+const message = document.getElementById("message");
 
 //Radio Buttons and Checkbox
 const generalRadio = document.getElementById("generalQ");
@@ -23,6 +25,7 @@ const lastNmErr = document.getElementById("lastNameErr");
 const emailErr = document.getElementById("emailErr");
 const queryErr = document.getElementById("queryErr");
 const messErr = document.getElementById("messErr");
+const consentErr = document.getElementById("consentErr");
 
 //Functions
 const inputChecker = function (input) {
@@ -36,6 +39,8 @@ const inputChecker = function (input) {
     else return false;
   });
 };
+
+ALGO QUE SE PODRIA HACER ES NOMBRAR DINAMICAMENTE A LOS ERRORES, COSA QUE SI SE VERIFICA MEDIANTE UN CHECKER DE ARRAY QUE UN ELEMENTO NO ES VERDADERO, TODOS LOS ELEMENTOS FALSOS SE AÑADEN A OTRO ARRAY. ESTE OTRO ARRAY SE LE PODRIA HACER UN FOR EACH EN EL QUE A CADA UNO SE LE SELECCIONA CON DOCUMENT.GETELEMENTBYID Y EN EL PARÉNTESIS SE ESPECÍFICA EL NOMBRE DEL INPUT Y EL ERROR QUE SE DEBE MOSTRAR. POR EJEMPLO ERROR-${INPUT} Y EL INPUT PUEDE SER MESSAGE 
 
 console.log(allInputChecker(allInputs));
  */
@@ -54,43 +59,65 @@ const emailChecker = function (email) {
 const success = function () {
   console.log("Success!");
   successMessage.classList.remove("hidden");
-  errorHandler();
+  hideError();
   reset();
 };
 
 const reset = function () {
   allInputs.forEach((input) => (input.value = ""));
-  textArea.value = "";
+  message.value = "";
   radioArray.forEach((radio) => (radio.checked = false));
 };
 
-//State?
-let show = true;
-
-const errorHandler = function () {
-  if (show) {
-    allErrors.forEach((error) => error.classList.remove("hidden"));
-    redBorders.forEach((border) => (border.style.borderColor = "#d73c3c"));
-  } else {
-    allErrors.forEach((error) => error.classList.add("hidden"));
-    redBorders.forEach((border) => (border.style.borderColor = "#87a3a6"));
-  }
+const hideError = function () {
+  allErrors.forEach((error) => error.classList.toggle("hidden redBorder"));
 };
 
 button.addEventListener("click", function (e) {
   e.preventDefault();
-  if (
-    inputChecker(firstNameInput) &&
-    inputChecker(lastNameInput) &&
-    emailChecker(emailInput.value) &&
-    inputChecker(textArea)
-  ) {
-    show = false;
-    success();
-  } /* else if () {
+  let successState;
+  console.log(firstNameInput.value);
+  console.log(emailChecker(emailInput.value));
+  if (inputChecker(firstNameInput)) {
+    successState = true;
+  } else {
+    firstNameInput.classList.add("redBorder");
+    firstNmErr.classList.remove("hidden");
+    successState = false;
+  }
 
-  } */ else {
-    show = true;
-    errorHandler();
+  if (lastNameInput.value) {
+    lastNmErr.classList.toggle("hidden");
+    successState = false;
+  } else successState = true;
+
+  if (emailChecker(emailInput.value)) {
+    successState = true;
+  } else {
+    emailErr.classList.toggle("hidden");
+    successState = false;
+  }
+
+  if (radioChecker(generalRadio) || radioChecker(supportRadio)) {
+    successState = true;
+  } else {
+    queryErr.classList.toggle("hidden");
+    successState = false;
+  }
+
+  if ((message.value = "")) {
+    messErr.classList.toggle("hidden");
+    successState = false;
+  } else successState = true;
+
+  if (radioChecker(consentCheck)) {
+    successState = true;
+  } else {
+    consentErr.classList.toggle("hidden");
+    successState = false;
+  }
+
+  if (successState) {
+    success();
   }
 });

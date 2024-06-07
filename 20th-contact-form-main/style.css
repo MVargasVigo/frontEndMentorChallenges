@@ -188,8 +188,7 @@ textarea:focus {
 }
 
 .redBorder {
-  /*   border-color: #d73c3c;
- */
+  border-color: #d73c3c;
 }
 
 #consentDiv {
