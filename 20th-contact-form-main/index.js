@@ -33,17 +33,6 @@ const inputChecker = function (input) {
   else return false;
 };
 
-/* const allInputChecker = function (inputArray) {
-  inputArray.forEach((input) => {
-    if (inputChecker(input)) return true;
-    else return false;
-  });
-};
-
-ALGO QUE SE PODRIA HACER ES NOMBRAR DINAMICAMENTE A LOS ERRORES, COSA QUE SI SE VERIFICA MEDIANTE UN CHECKER DE ARRAY QUE UN ELEMENTO NO ES VERDADERO, TODOS LOS ELEMENTOS FALSOS SE AÑADEN A OTRO ARRAY. ESTE OTRO ARRAY SE LE PODRIA HACER UN FOR EACH EN EL QUE A CADA UNO SE LE SELECCIONA CON DOCUMENT.GETELEMENTBYID Y EN EL PARÉNTESIS SE ESPECÍFICA EL NOMBRE DEL INPUT Y EL ERROR QUE SE DEBE MOSTRAR. POR EJEMPLO ERROR-${INPUT} Y EL INPUT PUEDE SER MESSAGE 
-
-console.log(allInputChecker(allInputs));
- */
 const radioChecker = function (radio) {
   if (radio.checked) return true;
   else return false;
@@ -70,17 +59,17 @@ const reset = function () {
 };
 
 const hideError = function () {
-  allErrors.forEach((error) => error.classList.toggle("hidden"));
-  allInputs.forEach((input) => input.classList.toggle("redBorder"));
+  allErrors.forEach((error) => error.classList.add("hidden"));
+  allInputs.forEach((input) => input.classList.remove("redBorder"));
 };
 
 button.addEventListener("click", function (e) {
   e.preventDefault();
   let successState;
-  console.log(firstNameInput.value);
-  console.log(emailChecker(emailInput.value));
   if (inputChecker(firstNameInput)) {
     successState = true;
+    firstNameInput.classList.remove("redBorder");
+    firstNmErr.classList.add("hidden");
   } else {
     firstNameInput.classList.add("redBorder");
     firstNmErr.classList.remove("hidden");
@@ -89,6 +78,8 @@ button.addEventListener("click", function (e) {
 
   if (inputChecker(lastNameInput)) {
     successState = true;
+    lastNameInput.classList.remove("redBorder");
+    lastNmErr.classList.add("hidden");
   } else {
     lastNameInput.classList.add("redBorder");
     lastNmErr.classList.remove("hidden");
@@ -97,6 +88,8 @@ button.addEventListener("click", function (e) {
 
   if (emailChecker(emailInput.value)) {
     successState = true;
+    emailInput.classList.remove("redBorder");
+    emailErr.classList.add("hidden");
   } else {
     emailInput.classList.add("redBorder");
     emailErr.classList.remove("hidden");
@@ -105,6 +98,7 @@ button.addEventListener("click", function (e) {
 
   if (radioChecker(generalRadio) || radioChecker(supportRadio)) {
     successState = true;
+    queryErr.classList.add("hidden");
   } else {
     queryErr.classList.remove("hidden");
     successState = false;
@@ -112,6 +106,8 @@ button.addEventListener("click", function (e) {
 
   if (inputChecker(message)) {
     successState = true;
+    message.classList.remove("redBorder");
+    messErr.classList.add("hidden");
   } else {
     message.classList.add("redBorder");
     messErr.classList.remove("hidden");
@@ -120,6 +116,7 @@ button.addEventListener("click", function (e) {
 
   if (radioChecker(consentCheck)) {
     successState = true;
+    consentErr.classList.add("hidden");
   } else {
     consentErr.classList.remove("hidden");
     successState = false;
