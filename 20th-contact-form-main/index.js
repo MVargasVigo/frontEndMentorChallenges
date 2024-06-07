@@ -3,11 +3,11 @@ const button = document.getElementById("btn");
 const redBorders = document.querySelectorAll(".redBorder");
 
 //Inputs
-const allInputs = document.querySelectorAll("input");
 const firstNameInput = document.getElementById("firstName");
 const lastNameInput = document.getElementById("lastName");
 const emailInput = document.getElementById("email");
 const message = document.getElementById("message");
+const allInputs = [firstNameInput, lastNameInput, emailInput, message];
 
 //Radio Buttons and Checkbox
 const generalRadio = document.getElementById("generalQ");
@@ -70,7 +70,8 @@ const reset = function () {
 };
 
 const hideError = function () {
-  allErrors.forEach((error) => error.classList.toggle("hidden redBorder"));
+  allErrors.forEach((error) => error.classList.toggle("hidden"));
+  allInputs.forEach((input) => input.classList.toggle("redBorder"));
 };
 
 button.addEventListener("click", function (e) {
@@ -86,34 +87,41 @@ button.addEventListener("click", function (e) {
     successState = false;
   }
 
-  if (lastNameInput.value) {
-    lastNmErr.classList.toggle("hidden");
+  if (inputChecker(lastNameInput)) {
+    successState = true;
+  } else {
+    lastNameInput.classList.add("redBorder");
+    lastNmErr.classList.remove("hidden");
     successState = false;
-  } else successState = true;
+  }
 
   if (emailChecker(emailInput.value)) {
     successState = true;
   } else {
-    emailErr.classList.toggle("hidden");
+    emailInput.classList.add("redBorder");
+    emailErr.classList.remove("hidden");
     successState = false;
   }
 
   if (radioChecker(generalRadio) || radioChecker(supportRadio)) {
     successState = true;
   } else {
-    queryErr.classList.toggle("hidden");
+    queryErr.classList.remove("hidden");
     successState = false;
   }
 
-  if ((message.value = "")) {
-    messErr.classList.toggle("hidden");
+  if (inputChecker(message)) {
+    successState = true;
+  } else {
+    message.classList.add("redBorder");
+    messErr.classList.remove("hidden");
     successState = false;
-  } else successState = true;
+  }
 
   if (radioChecker(consentCheck)) {
     successState = true;
   } else {
-    consentErr.classList.toggle("hidden");
+    consentErr.classList.remove("hidden");
     successState = false;
   }
 
