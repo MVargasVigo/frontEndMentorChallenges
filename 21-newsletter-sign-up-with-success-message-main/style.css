@@ -7,8 +7,8 @@
 
 ### Neutral
 
-- Dark Slate Grey: hsl(234, 29%, 20%)
-- Charcoal Grey: hsl(235, 18%, 26%)
+- Dark Slate Grey: #242742
+- Charcoal Grey: #36384e
 - Grey: hsl(231, 7%, 60%)
 - White: hsl(0, 0%, 100%)
 
@@ -22,4 +22,107 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  background-color: #36384e;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #242742;
+}
+
+#mainCard {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 20px;
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 48%;
+}
+
+#left h1 {
+  font-size: 3.3rem;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+#emailBox {
+  width: 100%;
+}
+
+#emailBox input {
+  width: 100%;
+  padding: 10px;
+  padding-right: 0;
+  border: solid 1px #9294a0;
+  border-radius: 5px;
+}
+
+#label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#label p {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.error {
+  color: #ff6257;
+}
+
+#right {
+  height: 100%;
+  width: 48%;
+}
+
+#right img {
+  width: 100%;
+}
+
+#successCard {
+  width: 40%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+button {
+  background-color: #242742;
+  color: white;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
 }
